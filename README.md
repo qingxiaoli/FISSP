@@ -15,11 +15,8 @@
   - [Features \& Statistics](#features--statistics)
   - [Installation \& Requirements](#installation--requirements)
   - [Usage](#usage)
-  - [Evaluation](#evaluation)
-  - [Citing](#citing)
+  - [Citing FISSP](#citing-fissp)
   - [License](#license)
-  - [Contact](#contact)
-  - [Contributing](#contributing)
 
 ---
 
@@ -83,77 +80,23 @@ To resize, normalize, or reorganize data:
     python scripts/prepare_dataset.py --data_dir ./data
     ```
     Adjust parameters (e.g., image size) inside the script or via command-line arguments.
-3. Self-Supervised Pre-training
-	- Example config: experiments/pretraining_config.yaml
-	- Run:
-        ```bash
-        python experiments/run_experiment.py --config experiments/pretraining_config.yaml
-        ```
-    - This trains the self-supervised model (defined in models/self_supervised_model.py) using both contrastive and generative objectives.
-4. Fine-Tuning for FGIR
-	- Example config: experiments/finetuning_config.yaml
-	- Run:
-        ```bash
-        python experiments/run_experiment.py --config experiments/finetuning_config.yaml
-        ```
-    - Loads the pre-trained weights and fine-tunes for retrieval tasks on standard benchmarks or custom splits.
 
-## Evaluation
 
-To evaluate on typical FGIR benchmarks, we provide scripts/evaluate_fgir.py. For example:
-```bash
-python scripts/evaluate_fgir.py \
-    --model_path ./checkpoints/pretrained_model.pth \
-    --data_dir ./data/test \
-    --batch_size 32
-```
-This script computes metrics like Recall@1, Recall@5, and mAP (if appropriate).
+## Citing FISSP
 
-## Citing
-```bash
-@inproceedings{FISSP2024,
-  title     = {FISSP: A Novel Fine-Grained Image Dataset for Enhancing Image Retrieval through Self-Supervised Pre-Training},
-  author    = {YourName and Co-Authors},
-  booktitle = {Conference Name},
-  year      = {2024},
-  pages     = {1--10}
+If you find our dataset **FISSP** helpful for your research or project, please cite our manuscript as follows:
+
+```bibtex
+@unpublished{XiaoqingLi2024fissp,
+    title  = {{FISSP}: A Novel Fine-Grained Image Dataset for Enhancing Image Retrieval through Self-Supervised Pre-Training},
+    author = {Xiaoqing Li, Tao Hong & Ya Wang},
+    note   = {Manuscript under submission, awaiting publication},
+    year   = {2024}
 }
 ```
 
 ## License
-This project is licensed under the Your Chosen License.
-Make sure to check the license terms if you plan to use the dataset in commercial or derivative works.
 
-## Contact
-For questions regarding FISSP, please open a GitHub issue or contact us via:
-> Email: your.email@domain.com
-We welcome pull requests and collaboration from the community!
+This project (FISSP Dataset) is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
 
-##  Contributing
-Please see CONTRIBUTING.md for guidelines on how to contribute to this project.
-
----
-Thank you for using FISSP! We hope our dataset will advance research in fine-grained image retrieval and self-supervised learning.
-```bash
-
-## Additional Notes
-
-1. **Annotation Files**:  
-   Include as much detail as possible in your annotation files (e.g., bounding boxes, part locations if relevant). JSON or CSV formats are common.
-
-2. **Documentation**:  
-   - `docs/FISSP_Statistics.md` can detail class distributions, sample images, or any special data collection procedures.  
-   - `docs/FAQ.md` can help new users quickly resolve common issues.
-
-3. **License**:  
-   - Common choices for datasets include [Creative Commons licenses (e.g., CC-BY)](https://creativecommons.org/licenses/) if you want to allow broader usage but still require attribution.  
-   - For code, you may choose [MIT](https://opensource.org/licenses/MIT), [Apache 2.0](https://opensource.org/licenses/Apache-2.0), or [GPL](https://opensource.org/licenses/GPL-3.0).
-
-4. **Contributions**:  
-   - Encourage the community to contribute scripts for new architectures, improved data augmentations, or different evaluation metrics.
-
-5. **Version Control**:  
-   - Consider tagging releases (e.g., `v1.0`, `v1.1`) if the dataset or code changes significantly.
-
-With this structure, you’ll have a user-friendly, well-documented repository for **FISSP** that others can easily explore, download, and integrate into their own research pipelines. Good luck with your project!
-```
+Make sure to check the license terms if you plan to use the dataset. **Commercial or for-profit usage is strictly prohibited under this license.**
