@@ -27,23 +27,15 @@
 
 Fine-Grained Image Retrieval (FGIR) is a crucial task in the field of Computer Vision, requiring models to discriminate among subtle details in images. **FISSP** aims to mitigate the lack of fine-grained data in existing self-supervised training corpora by providing a large-scale set of images with high-quality annotations.
 
-Our paper, ***"FISSP: A Novel Fine-Grained Image Dataset for Enhancing Image Retrieval through Self-Supervised Pre-Training"***, introduces FISSP and demonstrates its effectiveness on multiple benchmarks:
-- [CUB-200-2011](https://www.vision.caltech.edu/datasets/)
-- [Cars-196](https://www.kaggle.com/datasets/jessicali9530/stanford-cars-dataset)
-- [SOP (Stanford Online Products)](https://cvgl.stanford.edu/projects/lifted_struct/)
-- [In-Shop Clothes Retrieval](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/InShopRetrieval.html)
+Our paper, ***"FISSP: A Novel Fine-Grained Image Dataset for Enhancing Image Retrieval through Self-Supervised Pre-Training"***, introduces FISSP and demonstrates its effectiveness on multiple benchmarks.
 
 ---
 
 ## Features & Statistics
 
 Some highlights of FISSP:
-- **Number of images**: 200,000+ across fine-grained categories
-- **Number of classes**: 500+ distinct classes
-- **Annotations**:
-  - Bounding boxes for each object
-  - Fine-grained class labels
-  - Train/Val/Test splits
+- **Number of images**: 12M+ across fine-grained categories
+- **Numerous Categories**: categories such as animals, plants, fungi, products, food, means of transportation, clothing, and other items relevant to fine-grained retrieval applications.
 
 For detailed statistics, see [`docs/FISSP_Statistics.md`](docs/FISSP_Statistics.md).
 
@@ -53,7 +45,7 @@ For detailed statistics, see [`docs/FISSP_Statistics.md`](docs/FISSP_Statistics.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/username/FISSP.git
+   git clone https://github.com/qingxiaoli/FISSP.git
    cd FISSP
    ```
 2.	Install dependencies:
@@ -75,8 +67,6 @@ The repository provides the following directory structure for data/:
     ├── val/
     └── test/
 ```
-
-Each folder is further divided into subdirectories by class, along with corresponding annotation files in annotations/. If you are downloading the dataset for the first time, see Usage.
 
 ## Usage
 1.	Download/Set up the dataset
