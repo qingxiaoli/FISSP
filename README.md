@@ -25,6 +25,7 @@
 Fine-Grained Image Retrieval (FGIR) is a crucial task in the field of Computer Vision, requiring models to discriminate among subtle details in images. **FISSP** aims to mitigate the lack of fine-grained data in existing self-supervised training corpora by providing a large-scale set of images with high-quality annotations.
 
 Our paper, ***"FISSP: A Novel Fine-Grained Image Dataset for Enhancing Image Retrieval through Self-Supervised Pre-Training"***, introduces FISSP and demonstrates its effectiveness on multiple benchmarks.
+![fissp](figures/data1.png)
 
 ---
 
