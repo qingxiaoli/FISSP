@@ -20,13 +20,13 @@ import shutil
 import glob
 
 import numpy as np
-import cv2  # 假设我们用 opencv-python
+import cv2  # 用 opencv-python
 from PIL import Image
 
 import torch
 import torchvision
 import torchvision.transforms as T
-from torchvision.models import resnet50  # 仅作示例，可根据需求更换
+from torchvision.models import resnet50  # 可根据需求更换
 
 # ==============  1. Outlier Data Filtering  ==============
 def extract_features_with_cnn(image_path, model, transform, device="cpu"):
@@ -50,7 +50,7 @@ def extract_features_with_cnn(image_path, model, transform, device="cpu"):
 
 def cluster_and_filter_outliers(image_features, image_paths, z_threshold=3.0):
     """
-    简单示例：对特征做均值方差检测，将超出一定范围的样本视为异常/离群点。
+    对特征做均值方差检测，将超出一定范围的样本视为异常/离群点。
     更复杂的方式可以用KMeans或DBSCAN来聚类，然后根据类别大小或相似性过滤。
 
     参数:
@@ -188,7 +188,7 @@ def final_quality_check(root_dir):
     """
     print("[INFO] Performing final quality check...")
 
-    # 示例：统计剩余图片数量
+    # 统计剩余图片数量
     total_images = 0
     for root, dirs, files in os.walk(root_dir):
         for file in files:
